@@ -1,2 +1,5 @@
 API_KEY.py
 .DS_Store
+__pycache__
+data/
+image/
