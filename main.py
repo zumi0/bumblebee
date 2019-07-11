@@ -18,15 +18,18 @@ def MAKE_FILES(date):
         except:
             img = Image.open(image)
             img.show()
-            lat_d,lat_m,lat_s = input('Enter degree, minutes and seconds of latitude(ido).\n').split()
-            lon_d,lon_m,lon_s = input('Enter degree, minutes and seconds of longitude(keido).\n').split()
+            direction = input('Enter direction degree.\n')
+            lat_m,lat_s = input('Enter minutes and seconds of latitude(ido).\n').split()
+            lon_m,lon_s = input('Enter minutes and seconds of longitude(keido).\n').split()
             time = re.search(r"[0-9]+:[0-9]+", text).group(0)
-            direction = re.search(r"([0-9]+).?\s*[一-龥]+", text).group(1)
-            fake_lat = MAKE_LATLON(lat_d, lat_m, lat_s)
-            fake_lon = MAKE_LATLON(lon_d, lon_m, lon_s)
+            fake_lat = MAKE_LATLON(36, lat_m, lat_s)
+            fake_lon = MAKE_LATLON(140, lon_m, lon_s)
             lat = CONVERT_WGS(fake_lat,fake_lon)[0]
             lon = CONVERT_WGS(fake_lat,fake_lon)[1]
             arr.append([time, direction, lat, lon])
+            img.close()
+            print(image)
+            pass
     name = './data/' + date + '.csv'
     df = pd.DataFrame(arr, columns=['time', 'direction', 'lat', 'lon'])
     df.to_csv(name, header=True, index=False)
