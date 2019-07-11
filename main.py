@@ -11,7 +11,11 @@ def MAKE_FILES(date):
     arr = []
     for image in image_list:
         text = GET_TEXT(image)
-        arr.append(SHAPE_TEXT(text))
+        try:
+            arr.append(SHAPE_TEXT(text))
+        except:
+            print(image)
+            pass
     name = './data/' + date + '.csv'
     df = pd.DataFrame(arr, columns=['time', 'direction', 'lat', 'lon'])
     df.to_csv(name, header=True, index=False)
