@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def MAKE_LATLON(degree, minutes, seconds):
     return float(degree) + float(minutes) / 60 + float(seconds) / 3600
 
