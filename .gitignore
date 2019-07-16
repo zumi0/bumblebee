@@ -3,3 +3,6 @@ API_KEY.py
 __pycache__
 data/
 image/*
+.RData
+.Rhistory
+.ipynb_checkpoints/
