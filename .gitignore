@@ -2,9 +2,10 @@ API_KEY.py
 .DS_Store
 __pycache__
 data/
-image/*
+image/
 .RData
 .Rhistory
 .ipynb_checkpoints/
 intersects_190710.csv
 intsec_raw.R
+demomap.ipynb
