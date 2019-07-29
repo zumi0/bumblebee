@@ -31,7 +31,7 @@ def MAKE_FILES(date):
             print(image)
             pass
     name = './data/' + date + '.csv'
-    df = pd.DataFrame(arr, columns=['time', 'direction', 'lat', 'lon'])
+    df = pd.DataFrame(arr, columns=['time', 'dir', 'lat', 'lon'])
     df.to_csv(name, header=True, index=False)
 
 MAKE_FILES(sys.argv[1])
