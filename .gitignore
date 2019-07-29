@@ -7,6 +7,7 @@ image/
 .Rhistory
 .ipynb_checkpoints/
 intersects_190710.csv
+intersects_190726.csv
 intsec_raw.R
 demomap.ipynb
 test.html
