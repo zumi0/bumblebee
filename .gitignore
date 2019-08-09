@@ -8,12 +8,7 @@ image/
 .ipynb_checkpoints/
 intersects_190710.csv
 intersects_190726.csv
+intersects_190808.csv
 intsec_raw.R
-demomap.ipynb
-test.html
-Heatmap.html
-Heatmap_photo.html
 intersects.csv
-dualmap.html
-dualdatamap.html
-dualmap.ipynb
+mapdir/
